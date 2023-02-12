@@ -73,7 +73,7 @@ class Wifi:
             </security>
         </MSM>
     </WLANProfile>"""
-        command = 'netsh wlan add profile filename="C:/Users/Houjo/PycharmProjects/pythonProject/' + name + '.xml" user=all' + ' >nul 2>&1'
+        command = 'netsh wlan add profile filename="' + name + '.xml" user=all' + ' >nul 2>&1'
         with open(name + ".xml", 'w') as file:
             file.write(config)
         os.system(command)
